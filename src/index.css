@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-deep-space: #173753;
+  --color-steel-blue: #78a1bb;
+  --color-smoky-rose: #86626e;
+  --color-warm-cream: #ffffe2;
+  --color-alabaster: #eae1df;
+  --color-paper: #f7f3f1;
+  --color-ink: #13222f;
+
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper text-ink font-body;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    @apply bg-deep-space text-paper;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-smoky-rose);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Underline that draws in from the left on hover */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s var(--ease-out-soft);
+}
+.link-underline:hover,
+.link-underline:focus-visible {
+  background-size: 100% 1px;
+}
+
+.label {
+  @apply font-mono text-[11px] uppercase tracking-[0.14em];
+}
