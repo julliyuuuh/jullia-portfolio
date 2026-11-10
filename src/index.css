@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Colours are taken from the JL logo: peach paper, periwinkle ink, tan sparkle */
+@theme {
+  --color-cream: #f4e9e0; /* page */
+  --color-paper: #fbf6f1; /* cards */
+  --color-ink: #23243a; /* text + dark sections */
+  --color-ink-soft: #5c5d74; /* secondary text */
+  --color-peri: #878eb3; /* logo periwinkle */
+  --color-peri-deep: #545b92; /* links + accents (readable on cream) */
+  --color-peri-soft: #dfe0f0;
+  --color-sand: #c8ad96; /* logo sparkle */
+  --color-line: #e3d4c7;
+
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --ease-calm: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee: marquee 60s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-peri);
+  color: white;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-peri-deep);
+  outline-offset: 3px;
+}
+
+/* Small uppercase mono labels used for section names and meta */
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
