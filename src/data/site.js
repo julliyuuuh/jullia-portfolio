@@ -18,12 +18,30 @@ export const mailto = `mailto:${site.email}?subject=${encodeURIComponent(
 
 export const services = [
   {
-    title: "Website design",
-    text: "Landing pages, portfolios and small-business sites that explain what you do in five seconds and make the next step obvious.",
+    title: "Website redesign",
+    text: "Is your site hard to read on phones, or stuck in 2012? I redesign it into a clean, fast site your customers will trust, using your own content and brand.",
     deliverables: [
-      "Sitemap & wireframes",
-      "Desktop + phone UI",
-      "Clickable prototype",
+      "Homepage or full site",
+      "Phone-friendly layout",
+      "30 days of small fixes",
+    ],
+  },
+  {
+    title: "Small-business websites",
+    text: "Cafés, clinics, B&Bs and shops: hand-coded in HTML, CSS and JavaScript, with no page builder or plugin bills, so they load fast and stay secure.",
+    deliverables: [
+      "Call, book or order buttons",
+      "Hours, map & contact form",
+      "Basic SEO tags",
+    ],
+  },
+  {
+    title: "Landing pages for apps",
+    text: "One clear message, a sign-up or waitlist, and a little interaction that shows what your product does, built in React or Next.js.",
+    deliverables: [
+      "Next.js or React + TypeScript",
+      "Waitlist & sign-up forms",
+      "Fast, easy-to-host build",
     ],
   },
   {
@@ -33,24 +51,6 @@ export const services = [
       "Product & checkout flows",
       "Cart, account & order screens",
       "Friendly form errors",
-    ],
-  },
-  {
-    title: "Design → code",
-    text: "I build what I design in React and Tailwind, so nothing gets lost between the mockup and the live site.",
-    deliverables: [
-      "Responsive front-end",
-      "Motion & micro-interactions",
-      "Accessibility basics built in",
-    ],
-  },
-  {
-    title: "UX audit & redesign",
-    text: "A fresh look at a site you already have: what confuses people, what slows them down, and how to fix it.",
-    deliverables: [
-      "Usability review",
-      "Prioritised list of fixes",
-      "Redesigned key screens",
     ],
   },
 ];
@@ -70,7 +70,7 @@ export const process = [
   },
   {
     title: "Launch",
-    text: "I put it live, walk you through it, and stay around for the small tweaks that always come up.",
+    text: "You get the finished files, or I set the site live on hosting in your name. Small fixes are free for 30 days.",
   },
 ];
 
@@ -83,6 +83,6 @@ export const toolkit = {
     "Design systems",
     "Accessibility",
   ],
-  Build: ["React", "Tailwind CSS", "Motion", "JavaScript", "HTML & CSS", "Vite"],
+  Build: ["HTML & CSS", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Motion", "Vite"],
   "Also know the basics": ["Java", "C++", "C#", "MySQL", "Forms Builder"],
 };

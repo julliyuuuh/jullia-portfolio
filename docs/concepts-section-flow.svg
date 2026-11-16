@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="890" height="1010" viewBox="0 0 890 1010">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222222"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40" y="44" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#222222">Portfolio: Redesign concepts section</text>
+<path d="M415,148 L415,192" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,248 L415,292" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,348 L415,392" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,448 L415,492" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,548 L415,578" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M500,620 L544,620 L544,320 L510,320" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="510" y="614" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">Yes</text>
+<path d="M415,662 L415,678" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="423" y="678" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">No</text>
+<path d="M330,720 L165,720 L165,792" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="320" y="714" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">Yes</text>
+<path d="M500,720 L665,720 L665,792" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="510" y="714" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">Not yet</text>
+<path d="M165,848 L165,870 L415,870 L415,892" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M665,848 L665,870 L415,870 L415,892" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="320" y="92" width="190" height="56" rx="28" fill="#E6E6E6" stroke="#222222" stroke-width="1.6"/><text x="415" y="124.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Start</tspan></text>
+<rect x="320" y="192" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="224.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Arrives from nav</tspan><tspan x="415" dy="16">or by scrolling</tspan></text>
+<polygon points="336,292 510,292 494,348 320,348" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="324.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Picks a concept:</tspan><tspan x="415" dy="16">café, dental, app</tspan></text>
+<polygon points="336,392 510,392 494,448 320,448" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="424.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Drags the before /</tspan><tspan x="415" dy="16">after slider</tspan></text>
+<rect x="320" y="492" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="524.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Reads what changed</tspan><tspan x="415" dy="16">+ what it's built with</tspan></text>
+<polygon points="415,578 500,620 415,662 330,620" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="624.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">See another?</tspan></text>
+<polygon points="415,678 500,720 415,762 330,720" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="724.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Wants this for</tspan><tspan x="415" dy="16">their own site?</tspan></text>
+<polygon points="86,792 260,792 244,848 70,848" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="165" y="824.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="165" dy="-8">Emails to start</tspan><tspan x="165" dy="16">a project</tspan></text>
+<rect x="570" y="792" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="665" y="824.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="665" dy="-8">Reads the full</tspan><tspan x="665" dy="16">case studies</tspan></text>
+<rect x="320" y="892" width="190" height="56" rx="28" fill="#E6E6E6" stroke="#222222" stroke-width="1.6"/><text x="415" y="924.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">End</tspan></text>
+</svg>

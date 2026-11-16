@@ -4,17 +4,18 @@ My portfolio as a freelance UI/UX and web designer: two in-depth case studies, s
 
 ## Pages
 
-- **Home**: hero, a moving strip of real project screens, selected work, services, process, about, and contact
+- **Home**: hero, a moving strip of real project screens, selected work, redesign concepts (before/after sliders), services, process, about, and contact
 - **Case studies** (`/work/fleurisence`, `/work/weather-dashboard`): the problem, goals, users, flows, key design decisions with screens, visual system, outcome, and next steps
 
 ## Editing content
 
-All the words live in two files, so you never need to touch the components:
+All the words live in three files, so you never need to touch the components:
 
 - `src/data/site.js`: name, email, links, services, process, toolkit
 - `src/data/work.js`: the case studies, written as a list of blocks (text, decision, gallery, phones, stats…)
+- `src/data/concepts.js`: the redesign concepts (fictional businesses) shown with before/after sliders
 
-Screenshots are in `src/assets/work/`.
+Screenshots are in `src/assets/work/` and `src/assets/concepts/`.
 
 ## Built with
 
