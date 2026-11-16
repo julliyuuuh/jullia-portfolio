@@ -62,3 +62,25 @@ button:focus-visible {
     animation: none;
   }
 }
+
+/* Playground petals: fall, sway and spin. Paused by the button, and
+   switched off for anyone who prefers less motion. */
+@keyframes petal-fall {
+  0% { transform: translate(0, -2rem) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translate(1.5rem, 9rem) rotate(140deg); }
+  90% { opacity: 1; }
+  100% { transform: translate(-1rem, 19rem) rotate(260deg); opacity: 0; }
+}
+.petal {
+  animation-name: petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    animation: none;
+    opacity: 0.8;
+    top: 40%;
+  }
+}

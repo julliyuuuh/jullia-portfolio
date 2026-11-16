@@ -74,15 +74,29 @@ export const process = [
   },
 ];
 
-export const toolkit = {
-  Design: [
-    "User flows",
-    "Wireframing",
-    "Prototyping",
-    "UI design",
-    "Design systems",
-    "Accessibility",
-  ],
-  Build: ["HTML & CSS", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Motion", "Vite"],
-  "Also know the basics": ["Java", "C++", "C#", "MySQL", "Forms Builder"],
-};
+// The sticker board in the About section. `kind` sets the look:
+// me = who I am, design / build = skills, basics = languages I know the basics of,
+// learning = what I'm studying now. `shape`: pill, round, star, tag.
+export const stickers = [
+  { label: "BS Information Technology", kind: "me", shape: "tag" },
+  { label: "UI/UX", kind: "me", shape: "star" },
+  { label: "Chief Creatives Officer · AWS Student Builder Group TIP QC", kind: "me", shape: "tag", wide: true },
+  { label: "React", kind: "build", shape: "pill" },
+  { label: "User flows", kind: "design", shape: "pill" },
+  { label: "Next.js", kind: "build", shape: "pill" },
+  { label: "Accessibility", kind: "design", shape: "pill" },
+  { label: "TypeScript", kind: "build", shape: "pill" },
+  { label: "Wireframing", kind: "design", shape: "pill" },
+  { label: "Tailwind CSS", kind: "build", shape: "pill" },
+  { label: "HTML & CSS", kind: "build", shape: "round" },
+  { label: "Prototyping", kind: "design", shape: "pill" },
+  { label: "JavaScript", kind: "build", shape: "pill" },
+  { label: "Motion", kind: "build", shape: "star" },
+  { label: "Design systems", kind: "design", shape: "pill" },
+  { label: "Learning: AWS cloud + a bit of cybersecurity", kind: "learning", shape: "tag" },
+  { label: "Java", kind: "basics", shape: "pill" },
+  { label: "C++", kind: "basics", shape: "round" },
+  { label: "C#", kind: "basics", shape: "round" },
+  { label: "MySQL", kind: "basics", shape: "pill" },
+  { label: "Forms Builder", kind: "basics", shape: "pill" },
+];

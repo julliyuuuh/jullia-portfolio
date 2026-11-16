@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="1510" viewBox="0 0 640 1510">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222222"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40" y="44" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#222222">Fleurisence: shopper flow</text>
+<path d="M415,148 L415,192" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,248 L415,278" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M330,320 L165,320 L165,392" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="320" y="314" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">No</text>
+<path d="M165,448 L165,470 L415,470 L415,492" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,362 L415,492" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="423" y="378" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">Yes</text>
+<path d="M415,548 L415,592" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,648 L415,692" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,748 L415,792" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,848 L415,892" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M415,948 L415,978" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M500,1020 L544,1020 L544,620 L510,620" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="510" y="1014" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">Yes</text>
+<path d="M415,1062 L415,1092" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="423" y="1078" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">No</text>
+<path d="M415,1148 L415,1178" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M330,1220 L286,1220 L286,1120 L320,1120" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="320" y="1214" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">No</text>
+<path d="M415,1262 L415,1292" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/><text x="423" y="1278" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#222222">Yes</text>
+<path d="M415,1348 L415,1392" fill="none" stroke="#222222" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="320" y="92" width="190" height="56" rx="28" fill="#E6E6E6" stroke="#222222" stroke-width="1.6"/><text x="415" y="124.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Start</tspan></text>
+<rect x="320" y="192" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="224.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Landing page</tspan></text>
+<polygon points="415,278 500,320 415,362 330,320" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="324.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Signed in?</tspan></text>
+<polygon points="86,392 260,392 244,448 70,448" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="165" y="424.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="165" dy="-8">Sign in: Google,</tspan><tspan x="165" dy="16">Apple or email</tspan></text>
+<rect x="320" y="492" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="524.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Home: greeting,</tspan><tspan x="415" dy="16">latest order</tspan></text>
+<polygon points="336,592 510,592 494,648 320,648" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="624.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Shop: filter by category,</tspan><tspan x="415" dy="16">occasion, search</tspan></text>
+<rect x="320" y="692" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="724.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Product page</tspan></text>
+<polygon points="336,792 510,792 494,848 320,848" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="824.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Picks size, date</tspan><tspan x="415" dy="16">+ card message</tspan></text>
+<rect x="320" y="892" width="190" height="56" rx="3" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="924.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Adds to bag</tspan></text>
+<polygon points="415,978 500,1020 415,1062 330,1020" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="1024.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Keep shopping?</tspan></text>
+<polygon points="336,1092 510,1092 494,1148 320,1148" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="1124.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Checkout: delivery,</tspan><tspan x="415" dy="16">details, payment</tspan></text>
+<polygon points="415,1178 500,1220 415,1262 330,1220" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="1224.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">Form valid?</tspan></text>
+<polygon points="336,1292 510,1292 494,1348 320,1348" fill="#fff" stroke="#222222" stroke-width="1.6"/><text x="415" y="1324.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="-8">Order confirmed</tspan><tspan x="415" dy="16">+ tracker shown</tspan></text>
+<rect x="320" y="1392" width="190" height="56" rx="28" fill="#E6E6E6" stroke="#222222" stroke-width="1.6"/><text x="415" y="1424.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#222222"><tspan x="415" dy="0">End</tspan></text>
+</svg>

@@ -182,6 +182,7 @@ const views = {
   icons: IconsBlock,
   stats: StatsBlock,
   beforeAfter: BeforeAfterBlock,
+  iterations: IterationsBlock,
 };
 
 function Block({ block, theme }) {
@@ -301,6 +302,19 @@ function FlowBlock({ block, theme }) {
           </motion.li>
         ))}
       </ol>
+      {block.chart && (
+        <Reveal as="figure" className="mt-10">
+          <div className="overflow-hidden rounded-[1.5rem] border border-ink/10 bg-white p-4 md:p-8">
+            <img
+              src={block.chart.src}
+              alt={block.chart.alt}
+              loading="lazy"
+              className="mx-auto max-h-[56rem] w-auto max-w-full"
+            />
+          </div>
+          <figcaption className="mt-3 text-sm text-ink-soft">{block.chart.caption}</figcaption>
+        </Reveal>
+      )}
     </Section>
   );
 }
@@ -418,6 +432,44 @@ function IconsBlock({ block }) {
       <div className="mt-10">
         <WeatherIcons />
       </div>
+    </Section>
+  );
+}
+
+// "What I changed and why": each card walks through one change in three
+// steps. The step names can be renamed per case study with `steps`.
+function IterationsBlock({ block, theme }) {
+  const steps = block.steps ?? ["First try", "What I noticed", "What I changed"];
+  return (
+    <Section label={block.label} title={block.title}>
+      {block.body && <Paragraphs body={block.body} />}
+      <ol className="mt-10 grid gap-5 lg:grid-cols-3">
+        {block.items.map((item, i) => (
+          <Reveal
+            as="li"
+            key={item.title}
+            delay={i * 0.08}
+            className="flex flex-col rounded-[1.5rem] bg-paper p-6 md:p-7"
+          >
+            <p className="font-mono text-sm text-peri-deep">0{i + 1}</p>
+            <h3 className="mt-3 text-xl font-medium leading-snug tracking-[-0.02em]">{item.title}</h3>
+            <dl className="mt-6 space-y-5 border-t border-ink/10 pt-5 text-[0.95rem] leading-relaxed">
+              {[item.before, item.noticed, item.after].map((text, k) => (
+                <div key={steps[k]}>
+                  <dt
+                    className="label"
+                    style={k === 2 ? { color: theme.bg } : undefined}
+                  >
+                    {k === 2 ? "→ " : ""}
+                    {steps[k]}
+                  </dt>
+                  <dd className={`mt-1.5 ${k === 2 ? "text-ink" : "text-ink-soft"}`}>{text}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        ))}
+      </ol>
     </Section>
   );
 }

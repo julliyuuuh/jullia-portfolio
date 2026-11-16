@@ -25,4 +25,13 @@ All components and motion were written for this site. Packages:
 
 ## Diagrams
 
-`docs/concepts-section-flow` (.svg, .png, .drawio): process flowchart for the Redesign concepts section.
+Process flowcharts, drawn for this site (each as .svg, .png and an editable .drawio for Lucidchart):
+
+- `docs/concepts-section-flow`: the Redesign concepts section
+- `docs/fleurisence-flow`: Fleurisence shopper flow, shown in its case study
+- `docs/weather-dashboard-flow`: Weather Dashboard data flow, shown in its case study
+
+## Playground and stickers
+
+Every Playground piece (weather icons, "Add to bag" button, phone frame, falling petals) and the
+sticker board are my own code, recreated from my projects. The JL monogram is my own logo.

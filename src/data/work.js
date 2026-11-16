@@ -1,4 +1,6 @@
 import fLanding from "../assets/work/f-landing.jpg";
+import fleurFlow from "../../docs/fleurisence-flow.svg";
+import weatherFlow from "../../docs/weather-dashboard-flow.svg";
 import oldLanding from "../assets/work/old-landing.jpg";
 import oldmLanding from "../assets/work/oldm-landing.jpg";
 import oldmAbout from "../assets/work/oldm-about.jpg";
@@ -29,6 +31,8 @@ export const work = [
   {
     slug: "fleurisence",
     title: "Fleurisence",
+    // Short, honest title in my own words, used on the home page
+    headline: "A whole flower shop in 12 screens",
     summary:
       "Redesigning an online flower shop so sending a gift feels personal and takes minutes.",
     tags: ["UX/UI design", "E-commerce", "Front-end"],
@@ -116,6 +120,11 @@ export const work = [
         label: "User flow",
         title: "The path from landing to delivery",
         steps: ["Landing", "Sign in", "Home", "Shop", "Product", "Bag", "Checkout", "Tracking"],
+        chart: {
+          src: fleurFlow,
+          alt: "Flowchart of the shopper's path: landing, a sign-in check, home, shop, product, choosing size, date and card message, the bag, a keep-shopping loop, checkout with form checks, and the order confirmation",
+          caption: "The full flow: every screen, choice and loop.",
+        },
       },
       {
         type: "image",
@@ -207,6 +216,32 @@ export const work = [
         alt: "Settings page with notification switches and a Motion setting",
       },
       {
+        type: "iterations",
+        label: "Along the way",
+        title: "What I changed, and why",
+        body: "The first version of a screen is rarely the right one. These are three things I rebuilt after looking at them honestly.",
+        items: [
+          {
+            title: "Half a shop became a whole one",
+            before: "A landing page with bouquets and a bag. You could add flowers, and that was it.",
+            noticed: "It looked like a shop but didn't act like one: no way to sign in, pay, or check on an order.",
+            after: "I added the buying half: sign-in, a 3-step checkout, a profile and order tracking, so the whole journey works.",
+          },
+          {
+            title: "A pop-up became a page",
+            before: "Tapping a bouquet opened its details in a pop-up over the shop.",
+            noticed: "A pop-up can't be shared, bookmarked or found on Google, and sending flowers is often a shared decision.",
+            after: "Every bouquet now has its own page and link, so someone can send it to a friend and ask “this one?”",
+          },
+          {
+            title: "The heart that looked crooked",
+            before: "Product cards tilted gently toward the cursor, including the save ♡ in the top corner.",
+            noticed: "That corner tilts the most, so the heart looked skewed right as you went to tap it. The default blue focus ring looked off-brand too.",
+            after: "The card now holds still while you're on the heart, and a forest-green focus ring shows only for keyboard users.",
+          },
+        ],
+      },
+      {
         type: "stats",
         label: "Outcome",
         title: "What shipped",
@@ -239,6 +274,7 @@ export const work = [
   {
     slug: "weather-dashboard",
     title: "Weather Dashboard",
+    headline: "A weather app that changes with the sky",
     summary:
       "A weather app that answers \"what's it like outside?\" at a glance, and changes its mood with the sky.",
     tags: ["UI design", "Data & APIs", "Front-end"],
@@ -318,6 +354,11 @@ export const work = [
         label: "How it works",
         title: "From a city name to a mood",
         steps: ["City name", "Geocoding API", "Coordinates", "Forecast API", "Weather code", "Icon + theme"],
+        chart: {
+          src: weatherFlow,
+          alt: "Flowchart of the data flow: a typed city name goes to the geocoding API; if no city is found a friendly message asks to try again; otherwise the forecast API is called, a connection problem shows its own message, and a successful reply is mapped to an icon, label and theme before the weather is shown",
+          caption: "Including the two ways it can go wrong, and what the person sees each time.",
+        },
       },
       {
         type: "stats",
@@ -331,21 +372,31 @@ export const work = [
         ],
       },
       {
-        type: "split",
-        label: "What's next",
-        title: "Ideas for version 2",
-        body: [
-          "Two everyday questions the app can't answer yet: \"Will it rain at 5?\" and \"What's it like right where I am?\" Those shape what comes next.",
+        type: "iterations",
+        label: "Looking back",
+        title: "What I'd change, and why",
+        body: "Using it again with fresh eyes, three things stand out. They're what version 2 is for.",
+        steps: ["How it works now", "Why that's a problem", "What I'd change"],
+        items: [
+          {
+            title: "It guesses which city you mean",
+            before: "The search keeps only the first match for the name you type.",
+            noticed: "Many places share a name. There's more than one San Fernando in the Philippines alone, and you can't pick yours.",
+            after: "Show the top few matches with their province or country, and let you choose.",
+          },
+          {
+            title: "It can't answer “will it rain at 5?”",
+            before: "You get today's conditions and a 5-day forecast of highs and lows.",
+            noticed: "Day-level numbers don't help when you're deciding whether to bring an umbrella this afternoon.",
+            after: "Add an hourly strip for the next 12 hours, with the chance of rain.",
+          },
+          {
+            title: "It always starts in Manila",
+            before: "The app opens on Manila and shows temperatures only in °C.",
+            noticed: "Anyone outside Manila searches every single visit, and visitors used to °F have to convert in their heads.",
+            after: "A “Use my location” button that remembers your city, plus a °C / °F switch.",
+          },
         ],
-        list: {
-          title: "Next steps",
-          items: [
-            "Hourly temperature chart",
-            "°C / °F toggle",
-            "\"Use my location\" button",
-            "A picker for cities that share a name",
-          ],
-        },
       },
     ],
   },

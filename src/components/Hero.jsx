@@ -1,16 +1,16 @@
+import { useRef } from "react";
 import { Link } from "react-router";
-import { motion } from "motion/react";
+import {
+  motion,
+  useReducedMotionConfig,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import { site, mailto } from "../data/site";
 import { useLocalTime } from "../hooks/useLocalTime";
 import { ease } from "../lib/motion";
+import portrait from "../assets/jullia.jpg";
 
-const line = {
-  hidden: { y: "110%" },
-  show: (i) => ({
-    y: "0%",
-    transition: { duration: 1.1, delay: 0.25 + i * 0.1, ease },
-  }),
-};
 const fade = {
   hidden: { opacity: 0, y: 16 },
   show: (d) => ({
@@ -22,15 +22,25 @@ const fade = {
 
 export default function Hero() {
   const time = useLocalTime(site.timeZone);
+  const reduce = useReducedMotionConfig();
+  const stage = useRef(null);
+
+  // Gentle scroll parallax: the photo rises a little faster than the word
+  const { scrollYProgress } = useScroll({
+    target: stage,
+    offset: ["start start", "end start"],
+  });
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, -36]);
+  const wordY = useTransform(scrollYProgress, [0, 1], [0, -12]);
 
   return (
-    <section className="relative mx-auto max-w-6xl px-5 pb-14 pt-36 md:px-10 md:pb-20 md:pt-44">
+    <section className="relative overflow-hidden px-5 pb-16 pt-32 md:px-10 md:pb-24 md:pt-36">
       <motion.ul
         variants={fade}
         initial="hidden"
         animate="show"
         custom={0.1}
-        className="label flex flex-wrap gap-x-6 gap-y-2 text-ink-soft"
+        className="label mx-auto flex max-w-6xl flex-wrap justify-center gap-x-6 gap-y-2 text-ink-soft"
       >
         <li>{site.role}</li>
         <li>Based in the {site.location}</li>
@@ -40,84 +50,142 @@ export default function Hero() {
         </li>
       </motion.ul>
 
-      <h1 className="mt-8 text-[clamp(2.7rem,7.6vw,6.6rem)] font-medium leading-[0.98] tracking-[-0.045em]">
-        {[
-          <>I design websites</>,
-          <>
-            that feel{" "}
-            <span className="relative inline-block font-serif font-normal italic tracking-[-0.01em] text-peri-deep">
-              effortless
-              <Sparkle />
-            </span>
-            ,
-          </>,
-          <>and I build them, too.</>,
-        ].map((content, i) => (
-          <span key={i} className="block overflow-hidden pb-[0.1em]">
-            <motion.span
-              className="block"
-              variants={line}
-              initial="hidden"
-              animate="show"
-              custom={i}
+      {/* Stage: oversized word behind, photo in front */}
+      <div
+        ref={stage}
+        className="relative mx-auto mt-8 grid max-w-6xl place-items-center md:mt-10"
+      >
+        <motion.p
+          aria-hidden="true"
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, ease }}
+          style={reduce ? undefined : { y: wordY }}
+          className="pointer-events-none absolute select-none font-serif text-[clamp(6.5rem,27vw,23rem)] italic leading-none tracking-[-0.03em] text-peri/30"
+        >
+          jullia
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 0.2, ease }}
+          style={reduce ? undefined : { y: photoY }}
+          className="relative"
+        >
+          <div className="relative w-[clamp(11rem,24vw,19rem)]">
+            <div className="aspect-[4/5] overflow-hidden rounded-b-[1.75rem] rounded-tl-[50%_40%] rounded-tr-[50%_40%] bg-peri-soft shadow-[0_40px_80px_-40px_rgba(35,36,58,0.55)]">
+              <img
+                src={portrait}
+                alt="Jullia smiling at a café table, resting her chin on her hand"
+                fetchPriority="high"
+                className="h-full w-full object-cover object-[50%_40%]"
+              />
+            </div>
+
+            {/* Little floating notes around the photo */}
+            <Note
+              className="-left-16 top-[18%] -rotate-6 md:-left-28"
+              delay={0.9}
             >
-              {content}
-            </motion.span>
-          </span>
-        ))}
+              {site.available && (
+                <span
+                  className="h-2 w-2 rounded-full bg-emerald-400"
+                  aria-hidden="true"
+                />
+              )}
+              Open for projects
+            </Note>
+            <Note
+              className="-right-14 top-[46%] rotate-3 md:-right-24"
+              delay={1.05}
+            >
+              Design + code ✦
+            </Note>
+            <Note
+              className="-left-6 bottom-[6%] rotate-2 md:-left-14"
+              delay={1.2}
+            >
+              BSIT student
+            </Note>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Headline: a light line, then an italic line */}
+      <h1 className="mx-auto mt-12 max-w-4xl text-center leading-[1.02] tracking-[-0.04em] md:mt-14">
+        <motion.span
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          custom={0.45}
+          className="block text-[clamp(2.2rem,5.4vw,4.6rem)] font-light text-ink-soft"
+        >
+          I design websites
+        </motion.span>
+        <motion.span
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          custom={0.55}
+          className="block font-serif text-[clamp(2.7rem,6.6vw,5.6rem)] italic tracking-[-0.02em] text-ink"
+        >
+          and build them, too.
+        </motion.span>
       </h1>
+
+      <motion.p
+        variants={fade}
+        initial="hidden"
+        animate="show"
+        custom={0.7}
+        className="mx-auto mt-6 max-w-xl text-center text-lg leading-relaxed text-ink-soft"
+      >
+        Hi! I'm {site.firstName}, a UI/UX & web designer from the Philippines. I
+        design clear, lovely websites and hand-code them, so the little details
+        make it all the way to the live site.
+      </motion.p>
 
       <motion.div
         variants={fade}
         initial="hidden"
         animate="show"
-        custom={0.7}
-        className="mt-10 grid gap-8 border-t border-ink/10 pt-8 md:grid-cols-[1.2fr_1fr] md:items-end"
+        custom={0.8}
+        className="mt-8 flex flex-wrap justify-center gap-3"
       >
-        <p className="max-w-lg text-lg leading-relaxed text-ink-soft">
-          Hi, I'm {site.firstName}, a freelance UI/UX designer. I help small
-          brands and startups turn ideas into clear, lovely products, from the
-          first wireframe to a live, responsive site.
-        </p>
-        <div className="flex flex-wrap gap-3 md:justify-end">
-          <a
-            href={mailto}
-            className="rounded-full bg-ink px-7 py-3.5 text-paper transition hover:bg-peri-deep"
+        <a
+          href={mailto}
+          className="rounded-full bg-ink px-7 py-3.5 text-paper transition hover:bg-peri-deep"
+        >
+          Start a project
+        </a>
+        <Link
+          to="/#work"
+          className="group flex items-center gap-2 rounded-full border border-ink/15 px-7 py-3.5 transition hover:border-ink"
+        >
+          See my work
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-300 group-hover:translate-y-0.5"
           >
-            Start a project
-          </a>
-          <Link
-            to="/#work"
-            className="group flex items-center gap-2 rounded-full border border-ink/15 px-7 py-3.5 transition hover:border-ink"
-          >
-            See my work
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-300 group-hover:translate-y-0.5"
-            >
-              ↓
-            </span>
-          </Link>
-        </div>
+            ↓
+          </span>
+        </Link>
       </motion.div>
     </section>
   );
 }
 
-function Sparkle() {
+function Note({ className = "", delay = 0, children }) {
   return (
-    <motion.svg
-      viewBox="0 0 24 24"
+    <motion.span
       aria-hidden="true"
-      className="absolute -right-[0.55em] -top-[0.05em] h-[0.42em] w-[0.42em] text-sand"
-      initial={{ scale: 0, rotate: -45 }}
-      animate={{ scale: [0, 1.15, 1], rotate: 0 }}
-      transition={{ duration: 1.2, delay: 1.1, ease }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7, delay, ease }}
+      className={`absolute hidden items-center gap-2 whitespace-nowrap rounded-full border border-ink/10 bg-paper/90 px-3.5 py-2 text-xs shadow-[0_12px_30px_-14px_rgba(35,36,58,0.4)] backdrop-blur sm:flex ${className}`}
     >
-      <path
-        d="M12 0c.6 6.2 2.6 9.9 12 12-9.4 2.1-11.4 5.8-12 12-.6-6.2-2.6-9.9-12-12C9.4 9.9 11.4 6.2 12 0z"
-        fill="currentColor"
-      />
-    </motion.svg>
+      {children}
+    </motion.span>
   );
 }

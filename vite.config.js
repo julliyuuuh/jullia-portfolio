@@ -26,4 +26,7 @@ const cspMeta = {
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), cspMeta],
+  // Dev and preview servers only listen on this computer, not the whole network
+  server: { host: "127.0.0.1" },
+  preview: { host: "127.0.0.1" },
 });
